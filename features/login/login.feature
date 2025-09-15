@@ -1,8 +1,8 @@
 Feature: Login functionality
 
-  @login @smoke
+  @login @smoke @shiv
   Scenario: Login with valid credentials
-    Given the user launches the application
+    Given the user launches the "Swag Labs" application
     When the user logs in with username "standard_user" and password "secret_sauce"
     Then the user should be redirected to the Products page
 

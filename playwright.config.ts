@@ -1,4 +1,24 @@
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig,devices } from "@playwright/test";
+import { defineBddConfig, cucumberReporter } from "playwright-bdd";
+import { config } from "dotenv";
+
+if(process.env.ENV !== undefined){
+    console.log('Enviornmet is ${process.env.ENV}');
+    // config{(
+    config({
+    path:'./env/.env.${process.env.ENV}',
+    override:true,
+
+    });
+}else{
+    config();
+}
+
+
+const testDir=defineBddConfig({
+    features: "features/**/*.feature",
+    steps: ["src/steps/*.ts"]
+});
 
 /**
  * Read environment variables from file.

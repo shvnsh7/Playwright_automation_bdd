@@ -22,7 +22,7 @@ const testDir=defineBddConfig({
 
 export default defineConfig({
     expect:{
-        timeout:200000;
+        timeout:200000,
     },
     timeout:200000,
 
@@ -52,7 +52,7 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'retain-on-failure',
-    video:process.env.CI? 'retrain-on-failure' : 'retrain-on-failure',
+    // video:process.env.CI? 'retrain-on-failure' : 'retrain-on-failure',
   },
 
   /* Configure projects for major browsers */
