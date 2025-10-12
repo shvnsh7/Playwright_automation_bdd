@@ -1,8 +1,3 @@
-Feature: New User Order Placement
-
-
-
-
 Feature: Order placement functionality
 
   @order @smoke

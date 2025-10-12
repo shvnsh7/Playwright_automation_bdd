@@ -9,12 +9,12 @@
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.54.1",
-    "@types/node": "^24.0.15"
+    "@types/node": "^24.7.2"
   },
   "dependencies": {
     "date-fns": "^4.1.0",
     "date-fns-tz": "^3.2.0",
-    "dotenv": "^17.2.2",
-    "playwright-bdd": "^8.3.1"
+    "dotenv": "^17.2.3",
+    "playwright-bdd": "^8.4.1"
   }
 }

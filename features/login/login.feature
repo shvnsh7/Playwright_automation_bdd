@@ -11,3 +11,26 @@ Feature: Login functionality
     Given the user launches the application
     When the user logs in with username "invalid_user" and password "wrong_pass"
     Then an error message "Epic sadface: Username and password do not match any user in this service" should be displayed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

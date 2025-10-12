@@ -3,7 +3,7 @@ import { test } from "../../../src/steps/basetest.ts";
 
 test.describe('Login functionality', () => {
 
-  test('Login with valid credentials', { tag: ['@login', '@smoke', '@shiv'] }, async ({ Given, loginPage, When, Then }) => { 
+  test('Login with valid credentials', { tag: ['@login', '@smoke', '@shiv'] }, async ({ Given, When, Then, loginPage }) => { 
     await Given('the user launches the "Swag Labs" application', null, { loginPage }); 
     await When('the user logs in with username "standard_user" and password "secret_sauce"'); 
     await Then('the user should be redirected to the Products page'); 
@@ -14,9 +14,9 @@ test.describe('Login functionality', () => {
 // == technical section ==
 
 test.use({
-  $test: ({}, use) => use(test),
-  $uri: ({}, use) => use('features\\login\\login.feature'),
-  $bddFileData: ({}, use) => use(bddFileData),
+  $test: [({}, use) => use(test), { scope: 'test', box: true }],
+  $uri: [({}, use) => use('features\\login\\login.feature'), { scope: 'test', box: true }],
+  $bddFileData: [({}, use) => use(bddFileData), { scope: "test", box: true }],
 });
 
 const bddFileData = [ // bdd-data-start
