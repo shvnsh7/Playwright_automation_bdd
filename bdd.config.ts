@@ -17,7 +17,7 @@ if(process.env.ENV !== undefined){
 
 const testDir=defineBddConfig({
     features: "features/**/*.feature",
-    steps: ["steps/**/*.ts"]
+    steps: ["src/steps/*.ts"]
 });
 
 export default defineConfig({
@@ -27,7 +27,7 @@ export default defineConfig({
     timeout:200000,
 
   
-  testDir: './tests',
+  testDir: '.features-gen',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
